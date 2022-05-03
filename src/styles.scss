@@ -1,0 +1,213 @@
+p{
+	margin: 0px;
+}
+.App{
+	width: 628px;
+	margin: 50px;
+    .header{
+        margin-bottom: 48px;
+        &__h{
+            display: flex;
+            align-items: center;
+            margin-bottom: 24px;
+            h1{
+                margin: 0;
+	            margin-right: 24px;
+            }
+            p{
+                font-style: normal;
+                font-weight: 400;
+                font-size: 32px;
+                line-height: 38px;
+                color: #10A9FF;
+            }
+
+        }
+        &__text{
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 21px;
+            margin-right: 20px;
+            color: #777777;
+        } 
+    }
+    .choice{
+        margin-bottom: 48px;
+        display: flex;
+        background: #F0F8FA;
+        padding: 16px 35px;
+        border-radius: 8px;
+        margin-bottom: 16px;
+        justify-content: space-between;
+        &__text{
+            display: flex;
+            align-items: center;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 28px;
+            color: #000000;      
+        
+        }
+        &__number{
+            width: 196px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            
+            height: 64px;
+            background: #FFFFFF;
+            border-radius: 8px;
+
+            padding-left: 16px;
+            padding-right: 16px;
+            .number__down{
+                width: 44px;
+                height: 32px;
+                border: 2px solid #E4F3FA;
+                box-sizing: border-box;
+                border-radius: 4px;
+                border-color: transparent;
+            
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            p{
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 23px;
+            }
+            .number__up{
+                width: 44px;
+                height: 32px;
+                border-color: transparent;
+                background: #77BB4C;
+                border-radius: 4px;
+            
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        &__sign{
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            margin-left: 12px;
+            margin-top: 5px;
+            color: #10A9FF;
+        }
+        .checkbox{
+            display: inline-block;    
+            height: 61px;
+            line-height: 28px;  
+            position: relative;
+            vertical-align: middle;
+            font-size: 20px;
+            user-select: none;	
+            &__switch{
+                display: inline-block;	
+                height: 61px;
+                width: 196px;
+                box-sizing: border-box;
+                position: relative;	
+                border: 2px solid #E4F3FA;
+                border-radius: 8px;
+                background: #ffffff;
+                transition: background-color 0.3s cubic-bezier(0, 1, 0.5, 1);
+            }
+            &__switch:before {
+                content: attr(data-label-on);
+                display: inline-block;
+                box-sizing: border-box;		
+                width: 45px;	
+                padding: 0 12px;	
+                position: absolute;
+                top: 18px;
+                left: 118px;
+                text-transform: uppercase;
+                text-align: center;
+                color: #BCD2DD;;
+                font-size: 20px;
+                line-height: 21px;
+            }
+            &__switch:after {
+                content: attr(data-label-off);
+                display: inline-block;
+                box-sizing: border-box;	
+                width: 94px;	
+                border-radius: 1px;	
+                position: absolute;
+                top: 2px;
+                left: 1px;	
+                z-index: 5;
+                text-transform: uppercase;
+                text-align: center;
+                background: #77BB4C;
+                line-height: 52px;
+                font-size: 20px;
+                color: rgb(255, 255, 255);	
+                transition: transform 0.3s cubic-bezier(0, 1, 0.5, 1);
+                border-radius: 8px;
+            }
+        }
+        .checkbox input[type="checkbox"] {
+            display: block;	
+            width: 0;
+            height: 0;	
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+        }
+        .checkbox input[type="checkbox"]:checked + .checkbox__switch {
+            background-color: #ffffff;
+        }
+        .checkbox input[type="checkbox"]:checked + .checkbox__switch:before {
+            content: attr(data-label-off);
+            left: 4px;
+            top: 17px;
+        }
+        .checkbox input[type="checkbox"]:checked + .checkbox__switch:after {
+            content: attr(data-label-on);
+            background: #77BB4C;
+            transform: translate3d(95px, 0, 0);
+        }
+        .checkbox input[type="checkbox"]:checked + .checkbox__right:before{
+	     left: 20px;
+        }
+        /* Hover */
+        .checkbox input[type="checkbox"]:not(:disabled) + .checkbox__switch:hover {
+            cursor: pointer;
+        }
+
+        /* Disabled */
+        .checkbox input[type=checkbox]:disabled + .checkbox__switch {
+            opacity: 0.6;   
+            filter: grayscale(50%);
+        } 
+             
+
+    }
+    .present{
+        background: #EEF9E9;
+        padding: 30px 170px;
+        border-radius: 8px;
+        p{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        
+        }
+    }
+}
+
+ 
+
+
